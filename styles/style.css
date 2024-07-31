@@ -409,6 +409,11 @@
   fill: var(--heart-fill);
 }
 
+.card__icon-button:active .like-icon.is-liked .contour {
+    fill: var(--accent-color);
+
+}
+
 /* Если размер экрана равен или меньше 375px, то: */
 
 @media (width <= 375px) {
