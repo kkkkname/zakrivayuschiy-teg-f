@@ -295,6 +295,15 @@
   inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
 }
 
+.save__button:focus {
+    outline: none;
+
+}
+
+.save__button:focus-visible {
+  outline: var(--accent-color) solid 2px;
+}
+
 .floppy-icon {
   position: relative;
   z-index: 2;
@@ -346,6 +355,14 @@
   position: relative;
 }
 
+.disk-window__form-button:focus {
+  outline: none;
+}
+
+.disk-window__form-button:focus-visible {
+  outline: var(--accent-color) solid 2px;
+}
+
 .floppy-icon-large {
   inline-size: 39px;
   block-size: 39px;
@@ -375,23 +392,20 @@
   outline: none;
 }
 
-.card__icon-button:hover .like-icon .core {
-  fill: var(--accent-color);
-}
-
-.card__icon-button:hover .like-icon .main-body {
-  fill: var(--accent-color);
-}
-
+.card__icon-button:hover .like-icon .core,
+.card__icon-button:hover .like-icon .main-body,
 .card__icon-button:hover .like-icon .contour {
   fill: var(--accent-color);
 }
 
-.card__icon-button:active .like-icon .core {
+.card__icon-button:active .like-icon .core,
+.card__icon-button:active .like-icon .main-body {
   fill: var(--heart-fill);
 }
 
-.card__icon-button:active .like-icon .main-body {
+.card__icon-button:hover .like-icon.is-liked .core,
+.card__icon-button:hover .like-icon.is-liked .main-body,
+.card__icon-button:hover .like-icon.is-liked .contour {
   fill: var(--heart-fill);
 }
 
