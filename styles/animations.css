@@ -12,3 +12,134 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+.theme-menu__button {
+    transition: opacity 0.3s ease;
+}
+
+.theme-menu__button::after {
+    transition: transform 0.3s ease;
+}
+
+.theme-menu__button:disabled::before {
+    animation: button-pointer 0.5s ease-in-out infinite alternate;
+}
+
+.theme-menu__button:focus {
+    opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.theme-menu__button:hover {
+    opacity: 0.6;
+}
+
+.card__like-button {
+    transition: box-shadow 0.3s ease;
+}
+
+.card__like-button:focus-visible {
+    box-shadow: 2px 2px 0 0 var(--accent-color);
+}
+
+.card__icon-button {
+    transition: border 0.3s ease;
+}
+
+.card__icon-button:focus-visible {
+    border: 2px solid var(--accent-color);
+}
+
+.core {
+    transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon.is-liked .core {
+    fill: var(--heart-fill);
+}
+
+.card__icon-button:hover .like-icon .core {
+    transition: fill 0.3s linear;
+}
+
+.card__icon-button:active .like-icon .core {
+    transition: fill 0.3s linear;
+}
+
+.main-body {
+    transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .main-body {
+    fill: var(--heart-fill);
+}
+
+.card__icon-button:hover .like-icon .main-body {
+    transition: fill 0.3s linear;
+}
+
+.card__icon-button:active .like-icon .main-body {
+    transition: fill 0.3s linear;
+}
+
+.contour {
+    transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon.is-liked .contour {
+    transition: fill 0.1s linear;
+    fill: var(--heart-fill);
+}
+
+.card__icon-button:hover .like-icon .contour {
+    transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .sparks {
+    animation: sparks-pop 0.3s 0.3s ease-in alternate;
+}
+
+.like-icon.is-liked .heart {
+    animation: heart-pop 0.3s 0.1s ease-in alternate;
+}
+
+.button-hover-effect::after {
+    transition: transform 0.5s ease-in-out;
+}
+
+.button-hover-effect:hover::after {
+    transform: scaleX(1);
+}
+
+@keyframes button-pointer {
+    from {
+        inset-inline-start: -18px;
+    }
+
+    to {
+        inset-inline-start: -14px;
+    }
+}
+
+@keyframes heart-pop {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.15;
+    }
+}
+
+@keyframes sparks-pop {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
